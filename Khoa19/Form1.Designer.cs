@@ -30,70 +30,38 @@
         {
             this.components = new System.ComponentModel.Container();
             this.txtSoThuNhat = new System.Windows.Forms.TextBox();
-            this.btnTru = new System.Windows.Forms.Button();
-            this.btnChia = new System.Windows.Forms.Button();
             this.txtKetQua = new System.Windows.Forms.TextBox();
-            this.btnNhan = new System.Windows.Forms.Button();
             this.txtSoThuHai = new System.Windows.Forms.TextBox();
             this.phepTinh = new System.Windows.Forms.Label();
             this.lbSoThuNhat = new System.Windows.Forms.Label();
             this.lbSoThuHai = new System.Windows.Forms.Label();
             this.lbKetQua = new System.Windows.Forms.Label();
-            this.btnTong = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnTinh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             this.SuspendLayout();
             // 
             // txtSoThuNhat
             // 
-            this.txtSoThuNhat.Location = new System.Drawing.Point(611, 148);
+            this.txtSoThuNhat.Location = new System.Drawing.Point(165, 150);
             this.txtSoThuNhat.Name = "txtSoThuNhat";
             this.txtSoThuNhat.Size = new System.Drawing.Size(517, 39);
             this.txtSoThuNhat.TabIndex = 0;
             this.txtSoThuNhat.TextChanged += new System.EventHandler(this.txtSoThuNhat_TextChanged);
             // 
-            // btnTru
-            // 
-            this.btnTru.Location = new System.Drawing.Point(611, 429);
-            this.btnTru.Name = "btnTru";
-            this.btnTru.Size = new System.Drawing.Size(150, 46);
-            this.btnTru.TabIndex = 1;
-            this.btnTru.Text = "Trừ";
-            this.btnTru.UseVisualStyleBackColor = true;
-            this.btnTru.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnTru_MouseClick);
-            // 
-            // btnChia
-            // 
-            this.btnChia.Location = new System.Drawing.Point(985, 429);
-            this.btnChia.Name = "btnChia";
-            this.btnChia.Size = new System.Drawing.Size(158, 46);
-            this.btnChia.TabIndex = 3;
-            this.btnChia.Text = "Chia";
-            this.btnChia.UseVisualStyleBackColor = true;
-            this.btnChia.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnChia_MouseClick);
-            // 
             // txtKetQua
             // 
-            this.txtKetQua.Location = new System.Drawing.Point(611, 337);
+            this.txtKetQua.Location = new System.Drawing.Point(165, 339);
             this.txtKetQua.Name = "txtKetQua";
             this.txtKetQua.Size = new System.Drawing.Size(517, 39);
             this.txtKetQua.TabIndex = 2;
             // 
-            // btnNhan
-            // 
-            this.btnNhan.Location = new System.Drawing.Point(796, 429);
-            this.btnNhan.Name = "btnNhan";
-            this.btnNhan.Size = new System.Drawing.Size(150, 46);
-            this.btnNhan.TabIndex = 5;
-            this.btnNhan.Text = "Nhân ";
-            this.btnNhan.UseVisualStyleBackColor = true;
-            this.btnNhan.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnNhan_MouseClick);
-            // 
             // txtSoThuHai
             // 
-            this.txtSoThuHai.Location = new System.Drawing.Point(611, 242);
+            this.txtSoThuHai.Location = new System.Drawing.Point(165, 244);
             this.txtSoThuHai.Name = "txtSoThuHai";
             this.txtSoThuHai.Size = new System.Drawing.Size(517, 39);
             this.txtSoThuHai.TabIndex = 4;
@@ -104,7 +72,7 @@
             this.phepTinh.AutoSize = true;
             this.phepTinh.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.phepTinh.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.phepTinh.Location = new System.Drawing.Point(712, 37);
+            this.phepTinh.Location = new System.Drawing.Point(266, 39);
             this.phepTinh.Name = "phepTinh";
             this.phepTinh.Size = new System.Drawing.Size(416, 72);
             this.phepTinh.TabIndex = 6;
@@ -113,7 +81,7 @@
             // lbSoThuNhat
             // 
             this.lbSoThuNhat.AutoSize = true;
-            this.lbSoThuNhat.Location = new System.Drawing.Point(475, 155);
+            this.lbSoThuNhat.Location = new System.Drawing.Point(29, 157);
             this.lbSoThuNhat.Name = "lbSoThuNhat";
             this.lbSoThuNhat.Size = new System.Drawing.Size(139, 32);
             this.lbSoThuNhat.TabIndex = 7;
@@ -122,7 +90,7 @@
             // lbSoThuHai
             // 
             this.lbSoThuHai.AutoSize = true;
-            this.lbSoThuHai.Location = new System.Drawing.Point(475, 249);
+            this.lbSoThuHai.Location = new System.Drawing.Point(29, 251);
             this.lbSoThuHai.Name = "lbSoThuHai";
             this.lbSoThuHai.Size = new System.Drawing.Size(123, 32);
             this.lbSoThuHai.TabIndex = 8;
@@ -131,21 +99,11 @@
             // lbKetQua
             // 
             this.lbKetQua.AutoSize = true;
-            this.lbKetQua.Location = new System.Drawing.Point(475, 344);
+            this.lbKetQua.Location = new System.Drawing.Point(29, 346);
             this.lbKetQua.Name = "lbKetQua";
             this.lbKetQua.Size = new System.Drawing.Size(96, 32);
             this.lbKetQua.TabIndex = 9;
             this.lbKetQua.Text = "Kết quả";
-            // 
-            // btnTong
-            // 
-            this.btnTong.Location = new System.Drawing.Point(428, 429);
-            this.btnTong.Name = "btnTong";
-            this.btnTong.Size = new System.Drawing.Size(150, 46);
-            this.btnTong.TabIndex = 10;
-            this.btnTong.Text = "Cộng";
-            this.btnTong.UseVisualStyleBackColor = true;
-            this.btnTong.Click += new System.EventHandler(this.btnTong_Click);
             // 
             // errorProvider1
             // 
@@ -155,24 +113,46 @@
             // 
             this.errorProvider2.ContainerControl = this;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Cong",
+            "Tru",
+            "Nhan",
+            "Chia"});
+            this.comboBox1.Location = new System.Drawing.Point(771, 149);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(242, 40);
+            this.comboBox1.TabIndex = 10;
+            // 
+            // btnTinh
+            // 
+            this.btnTinh.Location = new System.Drawing.Point(771, 237);
+            this.btnTinh.Name = "btnTinh";
+            this.btnTinh.Size = new System.Drawing.Size(150, 46);
+            this.btnTinh.TabIndex = 11;
+            this.btnTinh.Text = "Tinh";
+            this.btnTinh.UseVisualStyleBackColor = true;
+            this.btnTinh.Click += new System.EventHandler(this.btnTinh_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1604, 802);
-            this.Controls.Add(this.btnTong);
+            this.ClientSize = new System.Drawing.Size(1051, 572);
+            this.Controls.Add(this.btnTinh);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.lbKetQua);
             this.Controls.Add(this.lbSoThuHai);
             this.Controls.Add(this.lbSoThuNhat);
             this.Controls.Add(this.phepTinh);
-            this.Controls.Add(this.btnNhan);
             this.Controls.Add(this.txtSoThuHai);
-            this.Controls.Add(this.btnChia);
             this.Controls.Add(this.txtKetQua);
-            this.Controls.Add(this.btnTru);
             this.Controls.Add(this.txtSoThuNhat);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             this.ResumeLayout(false);
@@ -181,13 +161,8 @@
         }
 
         #endregion
-
-        private Button btnTong;
         private TextBox txtSoThuNhat;
-        private Button btnTru;
-        private Button btnChia;
         private TextBox txtKetQua;
-        private Button btnNhan;
         private TextBox txtSoThuHai;
         private Label phepTinh;
         private Label lbSoThuNhat;
@@ -195,5 +170,7 @@
         private Label lbKetQua;
         private ErrorProvider errorProvider1;
         private ErrorProvider errorProvider2;
+        private Button btnTinh;
+        private ComboBox comboBox1;
     }
 }

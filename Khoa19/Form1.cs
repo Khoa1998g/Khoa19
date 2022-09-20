@@ -101,5 +101,76 @@ namespace Khoa19
                 this.errorProvider2.Clear();
             }
         }
+
+        private void btnTinh_Click(object sender, EventArgs e)
+        {
+            int chon = comboBox1.SelectedIndex;
+            int soThuNhat = int.Parse(txtSoThuNhat.Text);
+            int soThuHai = int.Parse(txtSoThuHai.Text);
+            if (comboBox1.Items[comboBox1.SelectedIndex].ToString()=="Cong")
+            {
+                if (txtSoThuNhat.Text == "" || txtSoThuHai.Text == "")
+                {
+                    MessageBox.Show("Bạn chưa nhập thông tin");
+                }
+                else
+                {
+                    int ketQua = soThuNhat + soThuHai;
+                    txtKetQua.Text = ketQua.ToString();
+                }
+            }
+            else if (chon == 1)
+            {
+                if (txtSoThuNhat.Text == "" || txtSoThuHai.Text == "")
+                {
+                    MessageBox.Show("Bạn chưa nhập thông tin");
+                }
+                else
+                {
+                    int ketQua = soThuNhat - soThuHai;
+                    txtKetQua.Text = ketQua.ToString();
+                }
+            }
+            else if (chon == 2)
+            {
+                if (txtSoThuNhat.Text == "" || txtSoThuHai.Text == "")
+                {
+                    MessageBox.Show("Bạn chưa nhập thông tin");
+                }
+                else
+                {
+                    int ketQua = soThuNhat * soThuHai;
+                    txtKetQua.Text = ketQua.ToString();
+                }
+            }
+            else
+            {
+                if (txtSoThuNhat.Text == "" || txtSoThuHai.Text == "")
+                {
+                    MessageBox.Show("Bạn chưa nhập thông tin");
+                }
+                else
+                {
+                    if (soThuHai == 0)
+                    {
+                        MessageBox.Show("Mẫu phải khác 0");
+                    }
+                    else
+                    {
+                        float ketQua = (float)soThuNhat/soThuHai;
+                        txtKetQua.Text = ketQua.ToString();
+                    }
+
+                }
+            }
+        }
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult r = MessageBox.Show("Bạn có muốn thoát không ?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            if (r == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
     }
 }
